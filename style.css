@@ -11,12 +11,13 @@ body {
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  transition: 0.3s;
 }
 .sliderContainer {
   width: 70vw;
   height: 70vh;
   position: relative;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 1.4), 0 3px 6px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 .slide {
@@ -26,23 +27,28 @@ body {
   position: absolute;
   top: -15vh;
   left: -15vw;
-  z-index: 1;
+  border: 2px solid orange;
+  font-size: 3.2rem;
+  color: white;
+  transform: translateY(-50%);
+  padding: 20px;
+  transition: 0.3s ease-in-out;
 }
-.angle {
-    position: fixed;
-    top: 50%;
-    background-color: transparent;
-    border: 2px solid orange;
-    font-size: 3.2rem;
-    color: white;
-    transform: translateY(-50%);
+.angle{
+  position: fixed;
     padding: 20px;
+    font-size: 2rem;
+    border: 2px solid orange;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 .leftBtn {
-    position: absolute;
-    left: calc(15vw - 333px);
+  position: absolute;
+  left: calc(15vw - 321px);
 }
 .rightBtn {
-    position: absolute;
-    right: calc(15vw - 259px);
+  position: absolute;
+  right: calc(15vw - 259px);
 }
