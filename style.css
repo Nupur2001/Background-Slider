@@ -52,3 +52,6 @@ body {
   position: absolute;
   right: calc(15vw - 259px);
 }
+.slide.active{
+  opacity: 1;
+}
