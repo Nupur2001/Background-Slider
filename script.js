@@ -6,19 +6,26 @@ let rightBtn = document.querySelector(".rightBtn");
 
 let slideNumber = 0;
 
+function slideActive() {
+  slide.forEach((s) => {
+    s.classList.remove("active");
+    slide[slideNumber].classList.add("active")
+  });
+}
+
 function rightClick() {
   if (slideNumber <= slide.length) {
     slideNumber = (slideNumber + 1) % slide.length;
   }
   body.style.backgroundImage = slide[slideNumber].style.backgroundImage;
-
+  slideActive();
   console.log(slideNumber);
 }
 
 function leftClick() {
-  let arr = [1, 2, 3, 4, 5];
-  slideNumber = (slideNumber - 1 + arr.length) % arr.length;
+  slideNumber = (slideNumber - 1 + slide.length) % slide.length;
   body.style.backgroundImage = slide[slideNumber].style.backgroundImage;
+  slideActive();
   console.log(slideNumber);
 }
 
@@ -28,4 +35,5 @@ rightBtn.addEventListener("click", () => {
 });
 leftBtn.addEventListener("click", () => {
   leftClick();
+  // console.log(leftClick())
 });
