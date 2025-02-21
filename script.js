@@ -5,34 +5,27 @@ let leftBtn = document.querySelector(".leftBtn");
 let rightBtn = document.querySelector(".rightBtn");
 
 let slideNumber = 0;
-// console.log(slide);
-// console.log(slide.length);
-// console.log(slideNumber)
 
+function rightClick() {
+  if (slideNumber <= slide.length) {
+    slideNumber = (slideNumber + 1) % slide.length;
+  }
+  body.style.backgroundImage = slide[slideNumber].style.backgroundImage;
 
-
-function rightClick(){
-    if (slideNumber <= slide.length) {
-        slideNumber=(slideNumber+1)%slide.length
-    }
-    body.style.backgroundImage=slide[slideNumber].style.backgroundImage
-    return slideNumber
+  console.log(slideNumber);
 }
 
-
-leftBtn.addEventListener("click", () => {
-  // Slide will move in left direction(--)
-  // slide.length-1
-  // slideNumber--
-  // body.style.backgroundImage
-});
+function leftClick() {
+  let arr = [1, 2, 3, 4, 5];
+  slideNumber = (slideNumber - 1 + arr.length) % arr.length;
+  body.style.backgroundImage = slide[slideNumber].style.backgroundImage;
+  console.log(slideNumber);
+}
 
 rightBtn.addEventListener("click", () => {
-
-  rightClick()
-// console.log(rightClick())
-
+  rightClick();
+  // console.log(rightClick())
 });
-
-
-
+leftBtn.addEventListener("click", () => {
+  leftClick();
+});
