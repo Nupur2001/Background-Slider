@@ -60,8 +60,6 @@ body {
   left: calc(15vw - 321px);
 }
 .rightBtn {
-  filter: brightness(1);
-
   position: absolute;
   right: calc(15vw - 259px);
 }
