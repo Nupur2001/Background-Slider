@@ -37,7 +37,6 @@ body {
   position: absolute;
   top: -15vh;
   left: -15vw;
-  border: 2px solid orange;
   font-size: 3.2rem;
   color: white;
   transform: translateY(-50%);
