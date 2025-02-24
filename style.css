@@ -3,8 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body::before{
-  content: '';
+body::after {
+  content: "";
   background-color: rgba(0, 0, 0, 0.2);
   height: 100vh;
   width: 100vw;
@@ -31,18 +31,26 @@ body {
   overflow: hidden;
 }
 .slide {
+  justify-content: center;
+  align-items: center;
+  display: flex;
   opacity: 0;
   width: 100vw;
   height: 100vh;
   position: absolute;
-  top: -15vh;
-  left: -15vw;
+  top: 50%;
+  left: 50%;
   font-size: 3.2rem;
   color: white;
-  transform: translateY(-50%);
-  padding: 20px;
+  transform: translate(-50%, -50%);
   transition: 0.3s ease-in-out;
   z-index: 1;
+  height: 80vh;
+  max-height: 100vh;
+  width: 80vw;
+  max-width: 1200px;
+  background-position: center center;
+  background-size: cover;
 }
 .angle {
   position: fixed;
